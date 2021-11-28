@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>DOM</title>
+</head>
+<body>
+    <div class="page white-page introduction-page">
+        <h1>Indrodução</h1>
+        <div class="topics">
+            <div>Guerra dos Navegadores - Netscape vs Internet Explorer</div>
+            <div>Final da década de 90</div>
+            <div>1995 - Netscape lança o JavaScript</div>
+            <div>Microsoft lança o JScript</div>
+            <div>DOM Legado</div>
+        </div>
+    </div>
+
+    <div class="page black-page domlegado-page">
+        <h1>DOM Legado</h1>
+        <div class="topics">
+            <div>Validação de form de usuários</div>
+            <div>Efeito Rollover</div>
+        </div>
+    </div>
+
+    <div class="page white-page dom-dois-page">
+        <h1>DOM Intermediário</h1>
+        <div class="topics">
+            <div>1997 - Netscape e Microsoft adicionam suporte Dynamic HTML (DHTML)</div>
+            <div>É possível alterar o HTML sem precisar recarregá-lo</div>
+            <div>As modificacações seguiam incopatíveis entre os navegadores</div>
+        </div>
+    </div>
+
+    <div class="page black-page pattern-page">
+        <h1>Linha do Tempo</h1>
+        <div class="topics">
+            <div>Padronização ECMAScript</div>
+            <div>1998 - DOM Nível 1</div>
+            <div>2000 - DOM Nível 2</div>
+            <div>2004 - DOM Nível 3</div>
+            <div>2014 - DOM Nível 4</div>
+        </div>
+    </div>
+
+    <div class="page white-page window-page">
+        <h1>JavaScript Window</h1>
+        <div class="topics">
+            <div>Representa a janela do browser</div>
+            <div>Todos os objetos, funções e variáveis globais pertencem ao window</div>
+            <div>As variáveis globais são propriedades do window</div>
+            <div>As funções globais são métodos do window</div>
+        </div>
+        <button class="get-window" onclick="getWindow()" >Mostrar window</button>
+        <div class="display-window"></div>
+    </div>
+
+    <div class="page black-page document-page">
+        <h1>JavaScript Document</h1>
+        <div class="topics">
+            <div>Representa o site</div>
+            <div>O Document contém todos os elementos do HTML</div>
+            <div>Document está contido no Window</div>
+        </div>
+        <button class="get-document" onclick="getDocument()" >Mostrar document</button>
+        <div class="display-document"></div>
+    </div>
+
+    <div class="page white-page element-page">
+        <h1>JavaScript Element</h1>
+        <div class="topics">
+            <div>Tudo que está contido no document é um element</div>
+            <div>Herda todos os métodos comuns a todos os elements</div>
+            <div>Exemplos de elements</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon>Header</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon>H1</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon>p</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon>Button</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon>Footer</div>
+        </div>
+    </div>
+
+    <div class="page black-page id-page">
+        <h1>ID</h1>
+        <div class="topics">
+            <div>id é o atrubuto para utilizar um elemento único</div>
+            <div>Só pode haver um elemento com o respectivo id</div>
+        </div>
+    </div>
+
+    <div class="page white-page class-page">
+        <h1>Class</h1>
+        <div class="topics">
+            <div>É o atributo usado para classicar um grupo de elementos a mesmas caracteríticas</div>
+            <div>Tem valor semântico</div>
+            <div>É utilizado para acessar um elemento via JS</div>
+        </div>
+    </div>
+
+    <div class="page black-page getElement-page">
+        <h1>getElement</h1>
+        <div class="topics">
+            <div>É possível pegar os elementos chamando-os pelo id ou class</div>
+        </div>
+    </div>
+
+    <div class="page white-page query-page">
+        <h1>querySelector</h1>
+        <div class="topics">
+            <div>Pega qualquer elemento que possua o nome especificado</div>
+            <div>Só retorna o primeiro elemento achado</div>
+        </div>
+    </div>
+
+    <div class="page black-page byid-byclassname-page"></div>
+
+    <div class="page white-page queryselector-page"></div>
+
+    <div class="page black-page element-page"></div>
+
+    <div class="page white-page innerhtml-text-content-page"></div>
+
+    <div class="page black-page nodelist-page"></div>
+
+    <div class="page white-page element-create-page"></div>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
