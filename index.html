@@ -10,6 +10,13 @@
     <title>DOM</title>
 </head>
 <body>
+    <div class="page black-page logo-page">
+        <div class="logo-h1">
+            <div class="logo"><img src="img/1200px-Unofficial_JavaScript_logo_2.svg.png" alt=""></div>
+            <div><h1>Document Object Model (DOM)</h1></div>
+        </div>
+    </div>
+
     <div class="page white-page introduction-page">
         <h1>Indrodução</h1>
         <div class="topics">
@@ -57,8 +64,10 @@
             <div>As variáveis globais são propriedades do window</div>
             <div>As funções globais são métodos do window</div>
         </div>
-        <button class="get-window" onclick="getWindow()" >Mostrar window</button>
-        <div class="display-window"></div>
+        <div class="button-display-window">
+            <button class="get-window" onclick="getWindow()" >Mostrar window</button>
+            <div class="display-window hide"><img src="img/window.png" alt=""></div>
+        </div>
     </div>
 
     <div class="page black-page document-page">
@@ -68,8 +77,10 @@
             <div>O Document contém todos os elementos do HTML</div>
             <div>Document está contido no Window</div>
         </div>
-        <button class="get-document" onclick="getDocument()" >Mostrar document</button>
-        <div class="display-document"></div>
+        <div class="button-display-document">
+            <button class="get-document" onclick="getDocument()" >Mostrar document</button>
+            <div class="display-document hide"><img src="img/document.png" alt=""></div>
+        </div>
     </div>
 
     <div class="page white-page element-page">
@@ -78,18 +89,18 @@
             <div>Tudo que está contido no document é um element</div>
             <div>Herda todos os métodos comuns a todos os elements</div>
             <div>Exemplos de elements</div>
-            <div><ion-icon name="return-down-forward-outline"></ion-icon>Header</div>
-            <div><ion-icon name="return-down-forward-outline"></ion-icon>H1</div>
-            <div><ion-icon name="return-down-forward-outline"></ion-icon>p</div>
-            <div><ion-icon name="return-down-forward-outline"></ion-icon>Button</div>
-            <div><ion-icon name="return-down-forward-outline"></ion-icon>Footer</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Header</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> H1</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> p</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Button</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Footer</div>
         </div>
     </div>
 
     <div class="page black-page id-page">
         <h1>ID</h1>
         <div class="topics">
-            <div>id é o atrubuto para utilizar um elemento único</div>
+            <div>id é o atributo para utilizar um elemento único</div>
             <div>Só pode haver um elemento com o respectivo id</div>
         </div>
     </div>
@@ -118,17 +129,97 @@
         </div>
     </div>
 
-    <div class="page black-page byid-byclassname-page"></div>
+    <div class="page black-page query-all-page">
+        <h1>querySelectorAll</h1>
+        <div class="topics">
+            <div>Retorna <strong>TODOS</strong> os elementos que possuem o nome especificado</div>
+        </div>
+    </div>
 
-    <div class="page white-page queryselector-page"></div>
+    <div class="page white-page id-class-query-page">
+        <h1>Exemplos</h1>
+        <div class="screen-buttons">
+            <div class="get-element-example">
+                <img src="img/get-element.png" alt="">
+                <div class="display-element-id hide"></div>
+                <div class="display-element-class hide"></div>
+            </div>
+            <div class="buttons">
+                <button class="get-element" onclick="getId()" >getElementById("exemplo-id")</button>
+                <button class="get-element" onclick="getClass()" >getElementByClassName("exemplo-class")</button>
+                <button class="get-element" onclick="getClass()" >querySelector(".exemplo-class")</button>
+                <button class="get-element" onclick="getId()" >querySelector(".exemplo-id")</button>
+                <button class="get-element" onclick="getClass()" >querySelectorAll(".exemplo-class")</button>
+            </div>
+        </div>
+    </div>
 
-    <div class="page black-page element-page"></div>
+    <div class="page black-page change-page">
+        <h1>Modificações no HTML</h1>
+        <div class="topics">
+            <div>É possível modificar os elementos do HTML</div>
+            <div>innerHTML</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Retorna todo o texto do elemento, inclusive as tags do HTML</div>
+            <div>innerText</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Retorna todo o texto do elemento, sem as tags</div>
+            <div>textContent</div>
+            <div><ion-icon name="return-down-forward-outline"></ion-icon> Retorna o texto do elemento e os filhos que estão somente em tags de formatação</div>
+            <div class="change-example"><img src="img/innerhtml_example.png" alt=""></div>
 
-    <div class="page white-page innerhtml-text-content-page"></div>
+            <div class="button-text">
+                <button class="get-element" onclick="getInnerHtml()" >innerHTML</button>
+                <div class="display-innerhtml hide">
+                    &lt;div id="mySets"&gt;</br>
+                    &nbsp;&nbsp;  Esse é meu exemplo para &lt;b&gt;alterar elementos&lt;/b&gt;:</br>
+                    &nbsp;&nbsp;  &lt;ul&gt;</br>
+                     &nbsp;&nbsp;   &lt;li&gt;&lt;a href="www.google.com"&gt;Tchau &lt;b&gt;Google&lt;/b&gt; &lt;/a&gt;&lt;/li&gt;</br>
+                     &nbsp;&nbsp;   &lt;li&gt;&lt;a href="www.driven.com.br"&gt;Bem vindo a &lt;b&gt;Driven&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;</br>
+                     &nbsp;  &lt;/ul&gt;</br>
+                      &lt;/div&gt;</br>
+                </div>
+            </div>
+            <div class="button-text">
+                <button class="get-element" onclick="getInnerText()" >innerText</button>
+                <div class="display-innertext hide">
+                    Esse é meu exemplo para alterar elementos:Tchau GoogleBemvindo a Driven
+                </div>
+            </div>
+            <div class="button-text">
+                <button class="get-element" onclick="getTextContent()" >textContent</button>
+                <div class="display-textcontent hide">
+                    Esse é meu exemplo para alterar elementos:
+                </div>
+            </div>
 
-    <div class="page black-page nodelist-page"></div>
+        </div>
+    </div>
 
-    <div class="page white-page element-create-page"></div>
+    <div class="page white-page nodelist-page">
+        <h1>NodeList</h1>
+        <div class="topics">
+            <div>É uma coleção de dados vindos, por exemplo, do querySelectorAll</div>
+            <div>Assim como arrays, possui length e index</div>
+            <div>Não possui os métodos push, pop, slice e join</div>
+            <div>É possível transformá-lo em um array com Array.from()</div>
+            <div>O NodeList do childList é dinâmico, ou seja as modificações nos elementos são automaticamente atualizadas no NodeList</div>
+        </div>
+
+    </div>
+
+    <div class="page black-page element-create-page">
+        <h1>createElement</h1>
+        <div class="topics">
+            <div>Cria um elemento conforme especificado</div>
+        </div>
+        <div class="create-element-example">
+            <div class="html-example"><img src="img/html_example.png" alt=""></div>
+            <button class="get-element" onclick="setCreateElement()" >createElement</button>
+            <div class="create-page-output">
+                <div class="js-example hide"><img src="img/createelement_js.png" alt=""></div>
+                <div class="create-html-example hide"><img src="img/output_example.png" alt=""></div>
+            </div>
+        </div>
+    </div>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
